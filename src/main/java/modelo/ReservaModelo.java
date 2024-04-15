@@ -73,28 +73,28 @@ public class ReservaModelo extends Conector{
      }
  }
  
- public int update(Reserva reserva) {
-     try {
-         PreparedStatement pst = this.conexion.prepareStatement("UPDATE reserva SET titulo = ?, descripcion = ? WHERE id = ?");
-         pst.setString(1, reserva.getTitulo());
-         pst.setString(2, tarea.getDescripcion());
-         pst.setInt(3, tarea.getId());
-
-         return pst.executeUpdate();
-     } catch (SQLException e) {
-         e.printStackTrace();
-         return 0;
-     }
- }
- 
- public void insert(Tarea tarea) {
-	    try {
-	        PreparedStatement pst = this.conexion.prepareStatement("INSERT INTO tareas (titulo, descripcion) VALUES (?, ?)");
-	        pst.setString(1, tarea.getTitulo());
-	        pst.setString(2, tarea.getDescripcion());
-	        pst.execute();
-	    } catch (SQLException e) {
-	        e.printStackTrace();
-	    }
-	}
+// public int update(Reserva reserva) {
+//     try {
+//         PreparedStatement pst = this.conexion.prepareStatement("UPDATE reserva SET titulo = ?, descripcion = ? WHERE id = ?");
+//         pst.setString(1, reserva.getTitulo());
+//         pst.setString(2, tarea.getDescripcion());
+//         pst.setInt(3, tarea.getId());
+//
+//         return pst.executeUpdate();
+//     } catch (SQLException e) {
+//         e.printStackTrace();
+//         return 0;
+//     }
+// }
+// 
+// public void insert(Tarea tarea) {
+//	    try {
+//	        PreparedStatement pst = this.conexion.prepareStatement("INSERT INTO tareas (titulo, descripcion) VALUES (?, ?)");
+//	        pst.setString(1, tarea.getTitulo());
+//	        pst.setString(2, tarea.getDescripcion());
+//	        pst.execute();
+//	    } catch (SQLException e) {
+//	        e.printStackTrace();
+//	    }
+//	}
 }

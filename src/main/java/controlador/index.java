@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import modelo.Reserva;
+import modelo.ReservaModelo;
+
 /**
  * Servlet implementation class Index
  */
@@ -34,7 +37,7 @@ public class index extends HttpServlet {
 				
 				
 				//set atribute de eese arraylist
-				request.setAttribute("tareas", tareas);
+				request.setAttribute("reservas", reservas);
 				
 				//abir la vista principal
 				request.getRequestDispatcher("index.jsp").forward(request, response);
